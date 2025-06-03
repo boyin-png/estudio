@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guía</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- <img src="utm-logo.png" alt="Logo UTM" class="logo-img"> Reemplaza con tu logo real -->
+            <div class="logo-placeholder"> S2</div>
+            <h1>suerte mailob !!!!!</h1>
+        </div>
+        <nav id="main-nav">
+            <button class="nav-button active" data-target="pdf1">Fundamentos</button>
+            <button class="nav-button" data-target="pdf2">Características</button>
+            <button class="nav-button" data-target="pdf3">Modelo E-R</button>
+            <button class="nav-button" data-target="pdf4">Modelo Relacional</button>
+            <button class="nav-button" data-target="preguntas">Preguntas</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN PDF 1: Fundamentos -->
+        <section id="pdf1" class="content-section active">
+            <h2>PDF 1: Fundamentos de Bases de Datos</h2>
+            <article>
+                <h3>Introducción a las Bases de Datos (BD)</h3>
+                <p><strong>¿Qué es una Base de Datos (BD)?</strong> Es una colección de datos interrelacionados y relevantes para una empresa u organización. Piensa en ella como un archivador digital súper organizado.</p>
+                <p><strong>¿Qué es un Sistema Gestor de Bases de Datos (SGBD)?</strong> Es el software (conjunto de programas) que nos permite crear, acceder y gestionar esa base de datos. Es como el bibliotecario que sabe dónde está cada libro y cómo encontrarlo.</p>
+                <p><strong>Objetivo Principal de un SGBD:</strong> Almacenar y recuperar información de una BD de forma práctica y eficiente. Queremos que sea rápido y fácil encontrar lo que buscamos.</p>
+                <p><strong>Importancia:</strong> Los SGBD manejan grandes cantidades de información, definen cómo se guarda (estructuras) y cómo se manipula.</p>
+            </article>
+            <article>
+                <h3>Aplicaciones Comunes</h3>
+                <ul>
+                    <li><strong>Información empresarial:</strong> Inventarios, ventas, clientes.</li>
+                    <li><strong>Banca y finanzas:</strong> Cuentas, transacciones.</li>
+                    <li><strong>Universidades:</strong> Estudiantes, calificaciones, cursos.</li>
+                    <li><strong>Líneas Aéreas:</strong> Reservas, vuelos.</li>
+                    <li><strong>Telecomunicaciones:</strong> Clientes, llamadas, planes.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Conceptos Clave</h3>
+                <p><strong>Dato:</strong> Una representación simbólica (número, letra, etc.) de información. Se usa para tomar decisiones. Ejemplo: tu edad es un dato (25), tu nombre es un dato ("Ana").</p>
+                <h4>Clasificación de Tipos de Datos:</h4>
+                <ul>
+                    <li><strong>Datos estáticos:</strong> Su tamaño en memoria no cambia durante la ejecución del programa (ej: un número entero siempre ocupa lo mismo).</li>
+                    <li><strong>Datos dinámicos:</strong> Su tamaño puede variar mientras el programa se ejecuta (ej: una lista de nombres que puede crecer).</li>
+                    <li><strong>Datos simples:</strong> Los básicos. Como números (<code>entero</code>), letras (<code>carácter</code>), números con decimales (<code>real</code>).</li>
+                    <li><strong>Datos estructurados:</strong> Colecciones de elementos (ej: una lista de alumnos, donde cada alumno es un elemento).</li>
+                </ul>
+                <h4>Actores en una Base de Datos:</h4>
+                <p>Son las personas que interactúan con la BD:</p>
+                <ul>
+                    <li><strong>Administrador de Bases de Datos (ABD):</strong> El "jefe" de la BD, se encarga de que todo funcione bien, seguridad, copias de respaldo.</li>
+                    <li><strong>Diseñador de Bases de Datos:</strong> El arquitecto, decide cómo se va a organizar la información.</li>
+                    <li><strong>Usuario final:</strong> Quien usa la BD para consultar, actualizar o generar informes (ej: un cajero en un banco).</li>
+                    <li><strong>Analista de sistemas y programador de aplicaciones:</strong> Crean los programas que usan la BD.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Modelos de Bases de Datos</h3>
+                <p>Un <strong>modelo de datos</strong> es como un plano o un conjunto de reglas para describir los datos, cómo se relacionan y qué restricciones tienen.</p>
+                <h4>Componentes de un Modelo de Datos:</h4>
+                <ul>
+                    <li><strong>Estructuras de datos:</strong> Define qué tipos de datos habrá y cómo se conectan entre sí.</li>
+                    <li><strong>Restricciones de integridad:</strong> Reglas para que los datos sean correctos y reflejen la realidad (ej: un DNI debe ser único).</li>
+                </ul>
+                <h4>Tipos de Modelos de BD (¡Importante!):</h4>
+                <ul>
+                    <li><strong>Relacional:</strong> El más común. Organiza los datos en tablas (como hojas de cálculo). Cada tabla tiene filas (registros o tuplas) y columnas (campos o atributos). Se usa SQL para consultarlo.</li>
+                    <li><strong>Entidad-Relación (E-R):</strong> Un modelo conceptual para diseñar BD. Se basa en:
+                        <ul>
+                            <li><strong>Entidades:</strong> "Cosas" u "objetos" del mundo real (ej: Alumno, Curso).</li>
+                            <li><strong>Atributos:</strong> Características de las entidades (ej: Nombre del alumno, Código del curso).</li>
+                            <li><strong>Relaciones:</strong> Cómo se conectan las entidades (ej: un Alumno "se inscribe en" un Curso).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Basado en objetos (Orientado a Objetos):</strong> Extiende el E-R. Piensa en los datos como "objetos" que tienen datos y funciones. Conceptos clave: Encapsulación (proteger datos), Herencia (objetos heredan características), Polimorfismo (una misma operación se comporta diferente según el objeto).</li>
+                    <li><strong>Semiestructurados:</strong> Permite que datos del mismo tipo tengan diferentes atributos. XML es un ejemplo. Es más flexible.</li>
+                    <li><strong>Jerárquicos:</strong> Como un árbol genealógico. Un nodo "padre" puede tener varios "hijos", pero cada "hijo" solo un "padre". Antiguo, puede generar redundancia.</li>
+                    <li><strong>De Red:</strong> Similar al jerárquico, pero un "hijo" puede tener varios "padres". Más flexible que el jerárquico para evitar redundancia, pero complejo de administrar.</li>
+                </ul>
+                <p><em>Dato curioso:</em> Los modelos Jerárquico y De Red son más antiguos y aunque potentes en su momento, son menos comunes hoy en día excepto en sistemas "legacy" (viejitos pero que siguen funcionando).</p>
+            </article>
+        </section>
+
+        <!-- SECCIÓN PDF 2: Características -->
+        <section id="pdf2" class="content-section">
+            <h2>PDF 2: Características, Funciones y Componentes</h2>
+            <article>
+                <h3>Características de una BD (¡Muy Importante!)</h3>
+                <ol>
+                    <li><strong>Almacenamiento estructurado:</strong>
+                        <ul>
+                            <li>Datos organizados en tablas (BD Relacionales como MySQL, PostgreSQL) o en otros formatos (NoSQL: documentos, grafos).</li>
+                            <li>Tablas con registros (filas) y campos (columnas) con tipos de datos definidos (ej: texto, número, fecha).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Integridad de los datos:</strong>
+                        <ul>
+                            <li><strong>Reglas de validación:</strong> Aseguran que los datos cumplan condiciones (ej: campo obligatorio, formato de email correcto).</li>
+                            <li><strong>Claves primarias y foráneas:</strong> Evitan duplicados y mantienen relaciones correctas entre tablas. ¡Fundamentales!</li>
+                            <li><strong>Transacciones ACID (en BD Relacionales):</strong> Atomicidad (todo o nada), Consistencia (datos válidos), Aislamiento (transacciones no se interfieren), Durabilidad (cambios persisten). Piensa en una transferencia bancaria: o se hace todo (quitar de una cuenta y poner en otra) o no se hace nada.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Acceso concurrente y control de usuarios:</strong>
+                        <ul>
+                            <li>Varios usuarios pueden acceder a la vez.</li>
+                            <li>Sistemas de permisos (roles y privilegios) para seguridad (ej: un usuario solo puede leer, otro puede modificar).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Lenguaje de consulta (SQL o alternativas):</strong>
+                        <ul>
+                            <li><strong>SQL (Structured Query Language):</strong> Para insertar, modificar, eliminar y consultar datos (ej: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>). El idioma universal de las BD relacionales.</li>
+                            <li><strong>NoSQL:</strong> Usan lenguajes propios como MQL (MongoDB Query Language) o APIs específicas.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Escalabilidad y rendimiento:</strong>
+                        <ul>
+                            <li><strong>Escalabilidad vertical:</strong> Aumentar capacidad del servidor (más RAM, CPU más potente).</li>
+                            <li><strong>Escalabilidad horizontal:</strong> Distribuir la carga en múltiples servidores (común en NoSQL).</li>
+                            <li><strong>Índices:</strong> Como el índice de un libro, ayudan a encontrar datos más rápido.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Seguridad:</strong>
+                        <ul>
+                            <li><strong>Cifrado de datos sensibles:</strong> Proteger información importante.</li>
+                            <li><strong>Copias de seguridad (backups) y recuperación ante fallos.</strong> ¡Vital!</li>
+                            <li><strong>Auditoría de accesos:</strong> Saber quién hizo qué y cuándo.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Independencia entre datos y aplicaciones:</strong>
+                        <ul>
+                            <li>Cambios en la estructura de la BD no deberían afectar (idealmente) a las aplicaciones que la usan.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Soporte para grandes volúmenes de datos (Big Data):</strong>
+                        <ul>
+                            <li>Algunas BD están optimizadas para manejar cantidades masivas de información (Petabytes). Ej: Hadoop, Cassandra.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </article>
+            <article>
+                <h3>Funciones de una BD</h3>
+                <p>Una BD hace muchas cosas, entre ellas:</p>
+                <ul>
+                    <li>Almacenar datos de forma estructurada.</li>
+                    <li>Recuperar datos (Consultas).</li>
+                    <li>Permitir insertar, actualizar y eliminar datos.</li>
+                    <li>Mantener la integridad de los datos.</li>
+                    <li>Controlar que varios usuarios puedan acceder sin problemas (Concurrencia).</li>
+                    <li>Proveer seguridad y control de acceso.</li>
+                    <li>Realizar respaldos y permitir la recuperación.</li>
+                    <li>Optimizar el rendimiento para que sea rápida.</li>
+                    <li>Soportar transacciones (ACID).</li>
+                    <li>Integrarse con aplicaciones.</li>
+                    <li>Ser escalable (crecer según se necesite).</li>
+                    <li>Permitir análisis y generar reportes.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Componentes de un Sistema de Base de Datos (SBD)</h3>
+                <p>Un SBD no es solo el software, es todo el conjunto:</p>
+                <ol>
+                    <li><strong>Datos:</strong> La información en sí. El corazón del sistema.</li>
+                    <li><strong>Hardware:</strong> Servidores, discos duros (SSD para velocidad), etc.</li>
+                    <li><strong>Software:</strong> El SGBD (ej: PostgreSQL, MySQL, MongoDB), sistema operativo, aplicaciones.</li>
+                    <li><strong>Usuarios:</strong> Administradores, diseñadores, programadores, usuarios finales.</li>
+                    <li><strong>Lenguajes de Base de Datos:</strong> SQL, MQL, etc.</li>
+                    <li><strong>Procedimientos y Protocolos:</strong> Reglas y pasos para usar y administrar el sistema (ej: cómo hacer backups, cómo dar permisos).</li>
+                </ol>
+                <h4>Ejemplo de un SBD en un Hospital:</h4>
+                <ul>
+                    <li><strong>Datos:</strong> Historias médicas de pacientes (en una tabla "Pacientes").</li>
+                    <li><strong>Hardware:</strong> Un servidor con discos SSD rápidos.</li>
+                    <li><strong>Software:</strong> PostgreSQL (SGBD) + una interfaz web para los médicos.</li>
+                    <li><strong>Usuarios:</strong> Médicos (consultan), Administradores (hacen backups).</li>
+                    <li><strong>Lenguaje:</strong> SQL para generar reportes (ej: <code>SELECT * FROM Pacientes WHERE edad > 60</code>).</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Componentes de un SBD ajustados a las necesidades de una organización</h3>
+                <p>Crear un SBD para una empresa implica varios pasos:</p>
+                <ol>
+                    <li><strong>Análisis de Requerimientos:</strong>
+                        <ul>
+                            <li><strong>Objetivo:</strong> Entender qué datos maneja la organización y cómo los usa.</li>
+                            <li><strong>Métodos:</strong> Entrevistas (con ventas, logística, RRHH), revisar documentos (facturas, inventarios).</li>
+                            <li><strong>Preguntas clave:</strong> ¿Qué datos se generan? ¿Qué volumen? ¿Acceso en tiempo real o análisis histórico?</li>
+                            <li><strong>Salida:</strong> Lista de entidades (futuras tablas) y operaciones importantes.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Selección del Modelo de Datos:</strong>
+                        <ul>
+                            <li><strong>Opción A: Relacional (SQL):</strong> Ideal para datos estructurados con relaciones complejas (ej: un ERP bancario), necesidad de transacciones ACID (sistemas contables). Ejemplos: PostgreSQL, MySQL, Oracle.</li>
+                            <li><strong>Opción B: NoSQL:</strong> Ideal para datos semi-estructurados o no estructurados (redes sociales), escalabilidad horizontal (apps móviles con millones de usuarios). Tipos: Documental (MongoDB para perfiles de usuario), Clave-Valor (Redis para caché de sesiones), Grafos (Neo4j para recomendaciones).</li>
+                            <li><strong>Criterios de decisión:</strong> Estructura de los datos, volumen y velocidad de crecimiento, si se necesita más consistencia (SQL) o más disponibilidad (NoSQL).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Diseño de la Arquitectura:</strong>
+                        <ul>
+                            <li><strong>Monolítica:</strong> BD centralizada (para PYMEs con bajo tráfico).</li>
+                            <li><strong>Cliente-Servidor:</strong> Aplicaciones acceden a un servidor de BD. El estándar.</li>
+                            <li><strong>Distribuida:</strong> Fragmentos de BD en múltiples nodos (ej: bancos con sucursales globales).</li>
+                            <li><strong>Híbrida:</strong> Combina SQL + NoSQL (ej: datos transaccionales en SQL y logs en MongoDB).</li>
+                            <li><strong>Herramientas de modelado:</strong> Diagramas E-R (para SQL), esquemas JSON/BSON (para NoSQL).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Selección de Hardware y Software:</strong>
+                        <ul>
+                            <li><strong>Hardware:</strong>
+                                <ul>
+                                    <li>Servidores: On-premise (control total, para empresas con regulaciones estrictas) o Cloud (AWS RDS, Azure SQL - escalabilidad y mantenimiento gestionado).</li>
+                                    <li>Almacenamiento: SSDs (alta velocidad), HDDs (datos históricos).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Software (DBMS):</strong>
+                                <ul>
+                                    <li>Criterios: Costo (open-source vs. licencias), soporte para replicación y backups, compatibilidad con lenguajes de programación (Python, Java).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Definición de Roles y Protocolos:</strong>
+                        <ul>
+                            <li><strong>Usuarios y permisos:</strong>
+                                <ul>
+                                    <li>Roles: DBA (acceso total), Desarrolladores (permisos DML como SELECT, INSERT), Analistas (solo consultas).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Herramientas de seguridad:</strong> Cifrado (TLS para conexiones, AES-256 para datos en reposo), Auditoría (logs de accesos).</li>
+                            <li><strong>Procedimientos operativos:</strong> Backup (frecuencia, método incremental/completo), Recuperación ante desastres (Plan con RTO - tiempo para recuperar, y RPO - cuántos datos se pueden perder).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pruebas y Optimización:</strong>
+                        <ul>
+                            <li><strong>Pruebas de carga:</strong> Simular miles de usuarios (ej: con JMeter). Ajustar índices y particiones.</li>
+                            <li><strong>Monitorización continua:</strong> Herramientas (Prometheus para métricas, Elasticsearch para logs). Métricas clave (tiempo de respuesta de consultas, uso de CPU/memoria).</li>
+                        </ul>
+                    </li>
+                </ol>
+            </article>
+        </section>
+
+        <!-- SECCIÓN PDF 3: Modelo E-R -->
+        <section id="pdf3" class="content-section">
+            <h2>PDF 3: Modelo Entidad-Relación (E-R)</h2>
+            <p>Este PDF profundiza en el modelo E-R, crucial para diseñar bases de datos antes de construirlas.</p>
+            <article>
+                <h3>Modelo Entidad-Relación (E-R) - Repaso y Profundización</h3>
+                <p>El modelo E-R nos ayuda a ver el mundo real y traducirlo a un diseño de BD. Se compone de:</p>
+                <ul>
+                    <li><strong>Entidades:</strong> Objetos básicos distinguibles. Pueden ser concretas (una persona) o abstractas (una fecha). Un "conjunto de entidades" agrupa entidades del mismo tipo (ej: todos los ALUMNOS de la UTM).</li>
+                    <li><strong>Atributos:</strong> Características que describen una entidad (ej: para Alumno: Nombre, Expediente, Carrera). Cada atributo tiene un "dominio" (valores permitidos, ej: para 'Edad', el dominio son números enteros positivos).</li>
+                    <li><strong>Relaciones:</strong> Asociaciones entre dos o más entidades (ej: un ALUMNO "cursa" una MATERIA).</li>
+                </ul>
+                <h4>Grado de una Relación:</h4>
+                <p>Indica cuántas entidades participan en la relación.</p>
+                <ul>
+                    <li><strong>Grado 1 (Unitaria):</strong> Una entidad se relaciona consigo misma (ej: un empleado es jefe de otros empleados).</li>
+                    <li><strong>Grado 2 (Binaria):</strong> Dos entidades distintas se relacionan (ej: un PROVEEDOR "suministra" ARTÍCULOS). Es la más común.</li>
+                    <li><strong>Grado 3 (Ternaria):</strong> Tres o más entidades se relacionan (ej: un CLIENTE usa una CUENTA en una SUCURSAL).</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Limitantes de Mapeo (Cardinalidad y Dependencia)</h3>
+                <p>Son reglas para que los datos sean realistas.</p>
+                <h4>1. Tipos de Relaciones (Cardinalidad):</h4>
+                <p>Define cuántas instancias de una entidad B se pueden relacionar con una instancia de una entidad A (y viceversa). ¡Esto es súper importante!</p>
+                <ul>
+                    <li><strong>Uno a Uno (1:1):</strong> Una instancia de A se relaciona con UNA SOLA de B, y una de B con UNA SOLA de A.
+                        <ul><li>Ejemplos: CONTRIBUYENTE – RFC (cada persona un RFC, cada RFC una persona), ALUMNO – No. MATRÍCULA.</li></ul>
+                    </li>
+                    <li><strong>Uno a Muchos (1:N):</strong> Una instancia de A se relaciona con VARIAS de B, pero una de B se relaciona con UNA SOLA de A.
+                        <ul><li>Ejemplos: CLIENTE – CUENTAS BANCARIAS (un cliente puede tener varias cuentas, una cuenta pertenece a un solo cliente), PADRE – HIJOS.</li></ul>
+                    </li>
+                    <li><strong>Muchos a Uno (N:1):</strong> Varias instancias de A se relacionan con UNA SOLA de B. Es el inverso de 1:N.
+                        <ul><li>Ejemplos: EMPLEADOS – EMPRESA (varios empleados trabajan en una empresa), ALUMNOS – ESCUELA.</li></ul>
+                    </li>
+                    <li><strong>Muchos a Muchos (N:N):</strong> Una instancia de A se relaciona con VARIAS de B, y una de B también se relaciona con VARIAS de A.
+                        <ul><li>Ejemplos: ESTUDIANTES – MATERIAS (un estudiante cursa varias materias, una materia es cursada por varios estudiantes), PROYECTOS – ARQUITECTOS.</li></ul>
+                    </li>
+                </ul>
+                <p><em>Nota:</em> La cardinalidad depende del "punto de vista" o las reglas del negocio. Por ejemplo, en un sistema un empleado podría estar asignado a un solo proyecto (1:1 con proyecto) o a varios (1:N con proyecto).</p>
+                <p><em>Formas de representar la cardinalidad:</em> Aparte de 1, N, M, se usa notación como (0,1) [cero o uno], (1,1) [exactamente uno], (0,n) [cero o muchos], (1,n) [uno o muchos]. El primer número es la participación mínima, el segundo la máxima.</p>
+
+                <h4>2. Dependencia de Existencia:</h4>
+                <p>Si la entidad A "depende" de la entidad B para existir, entonces A es "dependiente de existencia" de B. Si borras B, A también debe borrarse. B es la entidad "Dominante", A es la "Subordinada".</p>
+            </article>
+            <article>
+                <h3>Llaves (Claves)</h3>
+                <ul>
+                    <li><strong>Llave Primaria (Primary Key - PK):</strong> Atributo o conjunto de atributos que identifica de forma ÚNICA a cada instancia (fila) en una entidad (tabla). Ejemplo: No. Matrícula para Alumno. Se suele subrayar en los diagramas.</li>
+                    <li><strong>Llaves Secundarias (Candidate Keys):</strong> Otros atributos que también podrían ser PK porque son únicos (ej: CURP, RFC para una Persona, si la PK es un ID numérico).</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Tipos de Atributos (¡También Importante!)</h3>
+                <ul>
+                    <li><strong>Simples:</strong> No se pueden dividir más (ej: Edad, Género).</li>
+                    <li><strong>Compuestos:</strong> Se pueden dividir en partes más pequeñas con significado propio (ej: Dirección se compone de Calle, Número, Ciudad, CP; Nombre completo se compone de Nombre, Ap. Paterno, Ap. Materno).</li>
+                    <li><strong>Almacenados:</strong> Su valor se guarda directamente en la BD (ej: Fecha de Nacimiento).</li>
+                    <li><strong>Derivados (o Calculados):</strong> Su valor se calcula a partir de otros atributos y NO se guarda directamente (ej: Edad, se calcula desde Fecha de Nacimiento y la fecha actual). Se representan con un óvalo punteado.</li>
+                    <li><strong>Monovaluados (Univaluados):</strong> Tienen un solo valor para cada entidad (ej: una persona tiene un solo CURP).</li>
+                    <li><strong>Multivaluados:</strong> Pueden tener múltiples valores para una misma entidad (ej: una persona puede tener varios Números de Teléfono, varios hobbies). Se representan con un doble óvalo. A menudo indican la necesidad de una tabla separada en el modelo relacional.</li>
+                    <li><strong>Opcionales (Nulos):</strong> Pueden no tener valor. Un valor "nulo" significa que el valor es desconocido o no aplica (ej: Segundo Apellido puede ser nulo, Email).</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Atributos en las Relaciones</h3>
+                <p>A veces, una relación puede tener sus propios atributos. Por ejemplo, en la relación "un ALUMNO se INSCRIBE en una MATERIA", la "Fecha de Inscripción" o la "Calificación" son atributos de esa inscripción específica, no solo del alumno ni solo de la materia.</p>
+                <p>Cuando una relación N:N tiene atributos, o incluso a veces en relaciones 1:N, esto a menudo se resuelve convirtiendo la relación en una nueva entidad (llamada entidad asociativa o tabla intermedia) en el modelo relacional. Esta nueva entidad tendrá como llaves foráneas las llaves primarias de las entidades que relaciona, y sus propios atributos.</p>
+                <p>Ejemplo: Si PERSONA "ocupa" HABITACIÓN con atributos Fecha_Ingreso y Fecha_Salida, se podría crear una entidad HOSPEDAJE con esos atributos y relacionada con PERSONA y HABITACIÓN.</p>
+            </article>
+        </section>
+
+        <!-- SECCIÓN PDF 4: Modelo Relacional y Normalización -->
+        <section id="pdf4" class="content-section">
+            <h2>PDF 4: Normalización y Modelo Relacional</h2>
+            <article>
+                <h3>Transformación del Modelo E-R al Modelo Relacional</h3>
+                <p>El modelo E-R es un diseño. El modelo Relacional es cómo se implementa usando tablas. Aquí las reglas clave para "traducir":</p>
+                <ul>
+                    <li><strong>Cada Entidad se convierte en una Tabla.</strong> Los atributos de la entidad son las columnas de la tabla. La llave primaria de la entidad es la llave primaria de la tabla.</li>
+                    <li><strong>Relaciones N:M (Muchos a Muchos):</strong>
+                        <ul>
+                            <li>Se crea una <strong>NUEVA TABLA</strong> (tabla intermedia o asociativa) para representar la relación.</li>
+                            <li>Esta nueva tabla tendrá como columnas las <strong>llaves primarias</strong> de AMBAS entidades que relaciona. Estas dos llaves juntas usualmente forman la llave primaria de la nueva tabla.</li>
+                            <li>Si la relación E-R tenía atributos, estos se convierten en columnas en esta nueva tabla.</li>
+                            <li>Ejemplo: ESTUDIANTES (<u>id_estudiante</u>, nombre) y MATERIAS (<u>id_materia</u>, nombre_materia). La relación N:N "Estudiante_Cursa_Materia" se vuelve una tabla INSCRIPCIONES (<u>id_estudiante_fk</u>, <u>id_materia_fk</u>, fecha_inscripcion).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Relaciones 1:N (Uno a Muchos):</strong>
+                        <ul>
+                            <li><strong>Opción preferida:</strong> Se añade la llave primaria de la entidad del lado "1" como una <strong>llave foránea (FK)</strong> en la tabla de la entidad del lado "N".</li>
+                            <li>Los atributos de la relación (si los hay) se añaden como columnas en la tabla del lado "N".</li>
+                            <li>Ejemplo: CLIENTE (<u>id_cliente</u>, nombre) y PEDIDOS (<u>id_pedido</u>, fecha). Un cliente puede tener muchos pedidos. En la tabla PEDIDOS, se añade `id_cliente_fk`.</li>
+                            <li><em>Alternativa (menos común para 1:N puras):</em> Crear una tabla intermedia como en N:M. Esto se considera si hay muchos atributos en la relación, o si se espera que la relación pueda volverse N:M en el futuro, o si la participación del lado "N" es opcional y podría generar muchos nulos.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Relaciones 1:1 (Uno a Uno):</strong>
+                        <ul>
+                            <li>Hay varias formas, depende de la "participación" (si es obligatorio que existan ambas entidades en la relación):
+                                <ul>
+                                    <li>Si ambas participaciones son (1,1) (obligatorias): Puedes fusionar las dos entidades en una sola tabla, o elegir una tabla y añadir la PK de la otra como FK (y UNIQUE). La elección depende de la frecuencia de acceso.</li>
+                                    <li>Si una es (1,1) y la otra (0,1) (opcional): Se propaga la PK de la entidad (1,1) a la tabla de la entidad (0,1) como FK (y UNIQUE).</li>
+                                    <li>Si ambas son (0,1) (opcionales): Es mejor crear una tabla separada para la relación (como en N:M pero con PKs únicas) para evitar muchos nulos si las entidades no están relacionadas.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Atributos Multivaluados:</strong>
+                        <ul>
+                            <li>Se crea una <strong>NUEVA TABLA</strong> para el atributo multivaluado.</li>
+                            <li>Esta nueva tabla tendrá una columna para el atributo en sí y una columna con la llave primaria de la entidad original (como FK).</li>
+                            <li>Ejemplo: EMPLEADO (<u>id_empleado</u>, nombre) tiene un atributo multivaluado "Telefonos". Se crea TELEFONOS_EMPLEADO (<u>id_empleado_fk</u>, <u>numero_telefono</u>). La PK aquí sería la combinación de ambas.</li>
+                        </ul>
+                    </li>
+                     <li><strong>Relaciones Ternarias (Grado 3):</strong>
+                        <ul>
+                            <li><strong>Muchos a Muchos a Muchos (N:M:P):</strong> Se crea una nueva tabla. Su PK es la concatenación de las PKs de las 3 entidades participantes. Los atributos de la relación se añaden a esta tabla.</li>
+                            <li><strong>Muchos a Muchos a Uno (N:M:1):</strong> Se crea una nueva tabla. Su PK es la concatenación de las PKs de las entidades de los lados N y M. La PK de la entidad del lado '1' se añade como FK. Atributos de la relación van a esta tabla.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>Conceptos del Modelo Relacional (¡Tabla de equivalencias!)</h3>
+                <p>Es útil saber cómo se llaman las cosas en el mundo relacional y cómo se comparan con otros contextos:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Terminología Relacional</th>
+                            <th>Equivalente en "Tablas"</th>
+                            <th>Equivalente en "Archivos" (más antiguo)</th>
+                            <th>Explicación Sencilla</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Relación</strong></td>
+                            <td>Tabla</td>
+                            <td>Archivo</td>
+                            <td>La estructura principal donde se guardan los datos, como una hoja de cálculo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tupla</strong></td>
+                            <td>Fila / Renglón</td>
+                            <td>Registro</td>
+                            <td>Una instancia completa de datos, una "fila" en la tabla. Ej: los datos de UN estudiante.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Atributo</strong></td>
+                            <td>Columna / Campo</td>
+                            <td>Campo</td>
+                            <td>Una característica específica de los datos. Ej: "Nombre", "Edad".</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dominio</strong></td>
+                            <td>Tipo de dato + Restricciones</td>
+                            <td>-</td>
+                            <td>El conjunto de valores válidos para un atributo. Ej: para "Edad", números enteros entre 0 y 120.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Esquema de la Relación</strong></td>
+                            <td>Definición de la Tabla</td>
+                            <td>-</td>
+                            <td>El nombre de la tabla y la lista de sus columnas. Ej: ALUMNOS(<u>Matricula</u>, Nombre, Carrera).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Llave Primaria (PK)</strong></td>
+                            <td>Llave Primaria</td>
+                            <td>Llave Primaria</td>
+                            <td>Columna(s) que identifican unívocamente cada fila.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Llave Foránea (FK)</strong></td>
+                            <td>Llave Foránea</td>
+                            <td>-</td>
+                            <td>Columna(s) en una tabla que hacen referencia a la PK de otra tabla, estableciendo una relación.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Grado (de la Relación)</strong></td>
+                            <td>Número de Columnas</td>
+                            <td>Número de Campos</td>
+                            <td>Cuántos atributos (columnas) tiene una tabla.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cardinalidad (de la Relación)</strong></td>
+                            <td>Número de Filas</td>
+                            <td>Número de Registros</td>
+                            <td>Cuántas tuplas (filas) tiene una tabla en un momento dado.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><em>Dato curioso:</em> El término "Relacional" no viene de "relaciones entre tablas", sino del concepto matemático de "Relación" que es, en esencia, un conjunto de tuplas (una tabla).</p>
+            </article>
+            <article>
+                <h3>Tipos de Datos Comunes en SQL</h3>
+                <p>SQL soporta muchos tipos de datos, algunos comunes son:</p>
+                <ul>
+                    <li><strong>Numéricos:</strong> INT (enteros), DECIMAL, FLOAT (números con decimales).</li>
+                    <li><strong>Texto:</strong> CHAR (fijo), VARCHAR (variable), TEXT (grande).</li>
+                    <li><strong>Fecha/Hora:</strong> DATE, TIME, TIMESTAMP.</li>
+                    <li><strong>Booleanos:</strong> BOOLEAN (TRUE/FALSE).</li>
+                    <li>Otros: BINARY, BLOB (para archivos), JSON, XML.</li>
+                </ul>
+                <h4>SQL Básico para crear estructuras:</h4>
+                <pre><code>
+-- Crear una base de datos
+CREATE DATABASE mi_escuela_utm;
+
+-- Seleccionar la base de datos para usarla
+USE mi_escuela_utm;
+
+-- Crear una tabla llamada Alumnos
+CREATE TABLE Alumnos (
+    id_alumno INT PRIMARY KEY,       -- Llave primaria, tipo entero
+    nombre VARCHAR(50),             -- Texto de hasta 50 caracteres
+    apellido_paterno VARCHAR(50),
+    fecha_nacimiento DATE,
+    carrera_id INT,                  -- Esto sería una llave foránea
+    FOREIGN KEY (carrera_id) REFERENCES Carreras(id_carrera) -- Ejemplo de FK
+);
+
+-- Crear una tabla Carreras (necesaria para el ejemplo anterior)
+CREATE TABLE Carreras (
+    id_carrera INT PRIMARY KEY,
+    nombre_carrera VARCHAR(100) UNIQUE -- Nombre único para la carrera
+);
+                </code></pre>
+                <p>La <strong>Normalización</strong> (no detallada en este OCR pero mencionada como objetivo de la unidad) es un proceso para organizar las columnas y tablas de una base de datos relacional para minimizar la redundancia de datos y mejorar la integridad. Se basa en "Formas Normales" (1FN, 2FN, 3FN, BCNF, etc.).</p>
+            </article>
+        </section>
+
+        <!-- SECCIÓN DE PREGUNTAS -->
+        <section id="preguntas" class="content-section">
+            <h2>Preguntas de Repaso (Opción Múltiple)</h2>
+            <!-- Las preguntas se generarán aquí por JavaScript -->
+            <div id="quiz-container">
+                <!-- Ejemplo de estructura de pregunta (se generará dinámicamente)
+                <div class="quiz-question-container">
+                    <p class="quiz-question-text">1. ¿Qué es una Base de Datos?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> Un programa para escribir texto.</label>
+                        <label><input type="radio" name="q1" value="b"> Una colección de datos interrelacionados.</label>
+                        <label><input type="radio" name="q1" value="c"> Un tipo de hardware.</label>
+                    </div>
+                    <button class="check-answer-btn" data-question="0">Verificar</button>
+                    <div class="feedback"></div>
+                </div>
+                 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Guía Interactiva - Basado en material UTM. ¡Mucho éxito en tu examen!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
